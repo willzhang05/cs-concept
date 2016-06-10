@@ -1,44 +1,42 @@
-@font-face {
-    font-family: OpenSans;
-    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf')
-}
 * {
-    font-family: OpenSans, sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 100%;
     margin: 0;
     padding: 0;
     vertical-align: baseline;
     border: 0
 }
-header::before {
-	width: 100vw;
-	height: 35vh;	
-    content:"";
-    display: block;
-    position: absolute;
-    background-color: #536DFE;
-    opacity: 0.5;
-    z-index: 2;
-}
 header {
 	width: 100vw;
-	height: 35vh;
-	top: 0;
-	left: 0;
-	float: left;
-}
-#header-inner {
-	width: 100vw;
-	height: 35vh;
+	height: 80vh;
 	top: 0;
 	left: 0;
 	background-image: url('../dome.jpg');
-	background-size: 100%;
+	background-color: #A0A5FF;
+	background-blend-mode: screen;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
     z-index: 1;
+    transition: .4s height linear;
 }
+
+header .title {
+	position: relative;
+	display: inline-block;
+	top: 20%;
+	left: 20%;
+}
+header .title h1{
+	font-weight: 400;
+	font-size: 5em;
+}
+header .title h3{
+	font-size: 2em;
+	font-weight: 300;
+}
+
 @media (min-width: 500px) {
 	#header-inner {
 		background-size: cover;
@@ -46,8 +44,9 @@ header {
 }
 #content {
 	width: 100vw;
-	display: block;
-	float: left;
+	min-height: 60vh;
+	/*display: block;*/
+	/*float: left;*/
 }
 #tags-wrapper {
 	width: 100vw;
@@ -152,11 +151,7 @@ footer {
 	width: 100vw;
 	height: 5vh;
 	min-height: 75px;
-	bottom: 0;
-	left: 0;
-	float: left;
 	display: block;
-	background-color: #757575;
-	position: relative;
+	background-color: #A0A5FF;
 	z-index: 3;
 }
