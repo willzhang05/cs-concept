@@ -83,11 +83,11 @@ header .title h3{
 #tag-box-wrapper {
 	box-shadow: 0px 1px 6px -3px black;
 	background-color: #bdc0ff;
+	transition: background-color .2s, box-shadow .2s;
 }
 
-#tag-box-wrapper:focus {
-	box-shadow: 0px 1px 6px -3px black;
-	background-color: #cccfff;
+#tag-box-wrapper.focus {
+	box-shadow: 0px 3px 6px -3px black;
 }
 
 
