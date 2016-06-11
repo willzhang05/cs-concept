@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Open+Sans;
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf')
+}
+@font-face {
+    font-family: Open+Sans;
+    font-weight: 300;
+    src: url('../fonts/Open_Sans/OpenSans-Light.ttf')
+}
 * {
     font-family: Open Sans, sans-serif;
     font-size: 100%;
@@ -50,7 +59,6 @@ header .title h3{
 }
 #tags-wrapper {
 	min-height: 100px;
-	float: left;
 	background-color: #A0A5FF;
 	display: flex;
 	justify-content: center;
@@ -150,9 +158,13 @@ header .title h3{
     border: none;
 }
 .post:hover {
+	-webkit-transform: scale(1.05, 1.05);
+  	transform: scale(1.05, 1.05);
+  	z-index: 10;
 	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
 }
 .post h2 {
 	font-weight: bold;
