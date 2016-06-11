@@ -23,7 +23,7 @@ header {
 	background-image: url('../dome.jpg');
 	background-color: #A0A5FF;
 	background-blend-mode: screen;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
@@ -39,10 +39,10 @@ header .title {
 }
 header .title h1{
 	font-weight: 400;
-	font-size: 5em;
+	font-size: 7em;
 }
 header .title h3{
-	font-size: 2em;
+	font-size: 3em;
 	font-weight: 300;
 }
 
@@ -54,8 +54,6 @@ header .title h3{
 #content {
 	width: 100%;
 	min-height: 60vh;
-	/*display: block;*/
-	/*float: left;*/
 }
 #tags-wrapper {
 	min-height: 100px;

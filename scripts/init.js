@@ -15,7 +15,6 @@ window.onload = function() {
 		var content = document.createElement('div');
 		content.innerText = chickens;
 		child.className = 'post';
-		// child.style.background = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ')';
 		child.appendChild(title);
 		child.appendChild(content);
 		postWrapper.appendChild(child);
