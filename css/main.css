@@ -118,15 +118,15 @@ header .title h3 {
 }
 #post-wrapper {
     width: 90vw;
-    height: 100%;
-   padding: 2vh 5vw 0;	
-	  -webkit-column-count: 5;
-	  -webkit-column-gap:   10px;
-	  -moz-column-count:    5;
-	  -moz-column-gap:      10px;
-	  column-count:         5;
-	  column-gap:           10px; 
-	  min-height: 200px; 
+    min-height: 100%;
+    margin: 2vh auto 0;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 2vw;
+    -moz-column-count: 5;
+    -moz-column-gap: 2vw;
+    column-count: 5;
+    column-gap: 2vw;
+    min-height: 200px;
 }
 .post {
     width: calc(100% - 10px) !important;
