@@ -51,15 +51,63 @@ header .title h3{
 #tags-wrapper {
 	width: 100vw;
 	min-height: 100px;
-	display: block;
 	float: left;
+	background-color: #A0A5FF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-#tags-label {
-	width: 100vw;
-	display: inline-block;
+/*#tags-label {
+	width: calc(100vw - 25px);
 	margin: 5px;
 	float: left;
+	padding: 20px 0 0 20px;
+	font-size: 1.5em;
+}*/
+	
+#tag-input {
+	width: 60vw;
+	font-size: 1.2em;
+	padding: 10px;
+	outline: none;
+	color: #f0f0ff;
+	background-color: inherit;
 }
+
+#tag-icon {
+	font-size: 1.2em;
+	padding: 10px;
+	padding-right: 0;
+	outline: none;
+	color: #f0f0ff;
+}
+
+#tag-box-wrapper {
+	box-shadow: 0px 1px 6px -3px black;
+	background-color: #bdc0ff;
+}
+
+#tag-box-wrapper:focus {
+	box-shadow: 0px 1px 6px -3px black;
+	background-color: #cccfff;
+}
+
+
+::-webkit-input-placeholder { 
+    color:    #e5e7ff;
+}
+:-moz-placeholder { 
+   color:    #e5e7ff;
+   opacity:  1;
+}
+::-moz-placeholder { 
+   color:    #e5e7ff;
+   opacity:  1;
+}
+:-ms-input-placeholder { 
+   color:    #e5e7ff;
+}
+
 #tags {
 	width: 90vw;
 	min-height: 20px;

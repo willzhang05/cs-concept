@@ -7,6 +7,7 @@
     <link href="favicon.ico" rel="icon" type="image/ico">
     <link href="css/main.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
     <title>CSConnect</title>
 </head>
 
@@ -19,14 +20,18 @@
   	</header>
   	<div role="main" id="content">
   		<div id="tags-wrapper">
-			<label id="tags-label">What do you want to look at?</label>
-			<nav id="tags">
+			<!-- <label id="tags-label">What do you want to look at?</label> -->
+      <div id="tag-box-wrapper">
+        <span id="tag-icon"><i class="fa fa-tags" aria-hidden="true"></i></span><input type="text" name="tags" id="tag-input" placeholder="Let's CS Connect!">
+      </div>
+        
+			<!-- <nav id="tags">
 				<li class="tag">hackathon</li>
 				<li class="tag">internship</li>
 				<li class="tag">scholarship</li>
 				<li class="tag">project</li>
-			</nav>
-		</div>
+			</nav> -->
+		  </div>
     	<div id="post-wrapper">
     		
     	</div>
