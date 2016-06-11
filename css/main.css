@@ -7,14 +7,14 @@
     border: 0
 }
 header {
-	width: 100vw;
 	height: 80vh;
 	top: 0;
 	left: 0;
+    right: 0;
 	background-image: url('../dome.jpg');
 	background-color: #A0A5FF;
 	background-blend-mode: screen;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
@@ -39,17 +39,16 @@ header .title h3{
 
 @media (min-width: 500px) {
 	#header-inner {
-		background-size: cover;
+		background-size: contain;
 	}
 }
 #content {
-	width: 100vw;
+	width: 100%;
 	min-height: 60vh;
 	/*display: block;*/
 	/*float: left;*/
 }
 #tags-wrapper {
-	width: 100vw;
 	min-height: 100px;
 	float: left;
 	background-color: #A0A5FF;
@@ -57,13 +56,6 @@ header .title h3{
 	justify-content: center;
 	align-items: center;
 }
-/*#tags-label {
-	width: calc(100vw - 25px);
-	margin: 5px;
-	float: left;
-	padding: 20px 0 0 20px;
-	font-size: 1.5em;
-}*/
 	
 #tag-input {
 	width: 60vw;
@@ -111,8 +103,6 @@ header .title h3{
 #tags {
 	width: 90vw;
 	min-height: 20px;
-	padding: 2.5px;
-	margin: 0 calc(5vw - 2.5px);
 	float: left;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -132,7 +122,8 @@ header .title h3{
 
 #post-wrapper {
 	width: 90vw;
-	padding: 0 calc(5vw);	
+    margin-left: auto;
+    margin-right: auto;
 	  -webkit-column-count: 5;
 	  -webkit-column-gap:   2vw;
 	  -moz-column-count:    5;
@@ -198,8 +189,16 @@ header .title h3{
 footer {
 	width: 100vw;
 	height: 5vh;
-	min-height: 75px;
-	display: block;
+	min-height: 100px;
+	display: table-cell;
 	background-color: #A0A5FF;
 	z-index: 3;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    vertical-align: top;
 }
