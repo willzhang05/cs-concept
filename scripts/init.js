@@ -7,11 +7,10 @@ window.onload = function() {
 		var chickens = 'chickens';
 		var numChickens = Math.ceil(Math.random() * 5);
 		for(var c = 0; c < numChickens; c++) {
-			chickens += ' ' + chickens;
+			chickens += ' chickens';
 		}
 		var title = document.createElement('h2');
 		title.innerText = tags[Math.floor(Math.random() * tags.length)];
-		// console.log(title.innerText);
 		var child = document.createElement('div');
 		var content = document.createElement('div');
 		content.innerText = chickens;
