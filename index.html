@@ -18,10 +18,11 @@
   	</header>
   	<div role="main" id="content">
   		<div id="tags-wrapper">
-      <div id="tag-box-wrapper">
-        <span id="tag-icon"><i class="fa fa-tags" aria-hidden="true"></i></span><input type="text" name="tags" id="tag-input" placeholder="Let's CS Connect!">
-      </div>
-
+        <div id="tag-box-wrapper">
+          <span id="tag-icon"><i class="fa fa-tags" aria-hidden="true"></i></span>
+          <span id="tags"></span>
+          <input name="tags" id="tag-tb" class="tags" placeholder="Let's Get Connected!" />
+        </div>
 		  </div>
     	<div id="post-wrapper">
     		
@@ -32,7 +33,10 @@
     	<!-- Footer content -->
         <a href="mailto:" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i> Want to add something? Let us know!</a>
   	</footer>
-    <script src="scripts/init.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./scripts/init.js"></script>
+    <script defer src="./scripts/animations.js"></script>
+    <script defer src="./scripts/tagbox.js"></script>
 </body>
 
 </html>
