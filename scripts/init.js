@@ -1,3 +1,5 @@
+/* globals TagInput */
+
 'use strict';
 var tags = ['hackathon', 'internship', 'scholarship', 'project'];
 window.onload = function() {
@@ -19,4 +21,6 @@ window.onload = function() {
 		child.appendChild(content);
 		postWrapper.appendChild(child);
 	}
+
+	new TagInput(document.getElementById('tag-tb'), document.getElementById('tags'));
 };
