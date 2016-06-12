@@ -188,14 +188,14 @@ header .title h3 {
 }
 footer {
     width: 100vw;
-    height: 5vh;
-    min-height: 100px;
+    height: 7vh;
+    min-height: 150px;
     display: table-cell;
     background-color: #A0A5FF;
     z-index: 3;
     text-align: center;
+    padding-top: 5px;
     vertical-align: middle;
-    padding-top: 10px;
 }
 footer a {
     color: white;
