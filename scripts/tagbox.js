@@ -22,9 +22,9 @@ class TagInput {
 			this.insertTag();
 		} else if (e.which === 8 && this.input.value.length === 0 && this.tags.length > 0) {
 			this.backspace();
-		} else if (e.which === 37 && this.tags.length > 0) {
+		} else if (e.which === 37 && this.input.previousSibling.nodeType === Node.ELEMENT_NODE) {
 			this.shiftLeft();
-		} else if (e.which === 39 && this.tags.length > 0) {
+		} else if (e.which === 39 && this.input.nextSibling.nextSibling) {
 			this.shiftRight();
 		}
 
@@ -58,7 +58,7 @@ class TagInput {
 	}
 
 	shiftLeft () {
-		console.log('shift left');
+		console.log(this.input.previousSibling);
 		this.wrapper.insertBefore(this.input, this.input.previousSibling);
 		this.input.style.width = '1px';
 		this.input.focus();
