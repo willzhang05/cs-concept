@@ -59,6 +59,7 @@ header .title h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 #tag-tb {
     font-size: 1.2em;
@@ -95,6 +96,10 @@ header .title h3 {
 	vertical-align: middle;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 ::-webkit-input-placeholder {
     color: #e5e7ff;
 }
@@ -112,10 +117,11 @@ header .title h3 {
 
 .tag {
     height: 20px;
-    padding: 2px 10px;
+    padding: 3px 10px;
     margin-left: 10px;
     background-color: #e74c3c;
-    border-radius: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px black;
     display: inline-block;
     color: #fff;
 }
