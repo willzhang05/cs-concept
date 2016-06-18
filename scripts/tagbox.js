@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 class TagInput {
     constructor(input, wrapper) {
         this.input = input;
@@ -14,13 +14,15 @@ class TagInput {
     }
 
     handleKeyPress(e) {
-        if (e.which === 13 && this.input.value.length > 0 && !this.tags.includes(this.input.value)) {
+    	var code = e.keyCode || e.charCode;
+    	console.log(code);
+        if (code === 13 && this.input.value.length > 0 && !this.tags.includes(this.input.value)) {
             this.insertTag();
-        } else if (e.which === 8 && this.input.value.length === 0 && this.tags.length > 0) {
+        } else if (code === 8 && this.input.value.length === 0 && this.tags.length > 0) {
             this.backspace();
-        } else if (e.which === 37 && this.input.previousSibling.nodeType === Node.ELEMENT_NODE) {
+        } else if (code === 37 && this.input.previousSibling.nodeType === Node.ELEMENT_NODE) {
             this.shiftLeft();
-        } else if (e.which === 39 && this.input.nextSibling.nextSibling) {
+        } else if (code === 39 && this.input.nextSibling.nextSibling) {
             this.shiftRight();
         }
         this.input.style.width = ((this.input.value.length + 1) * 14) + 'px';

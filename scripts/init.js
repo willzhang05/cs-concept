@@ -12,20 +12,20 @@ window.onload = function() {
         }
         var titleWrapper = document.createElement('div');
         var title = document.createElement('h2');
-        title.innerText = tags[Math.floor(Math.random() * tags.length)];
+        title.textContent = tags[Math.floor(Math.random() * tags.length)];
         var child = document.createElement('div');
         var content = document.createElement('div');
         content.className = 'post-content';
-        content.innerText = chickens;
+        content.textContent = chickens;
         child.className = 'post';
         titleWrapper.className = 'post-title ' + title.innerHTML;
         child.id = 'post-' + i;
-        child.tag = title.innerText;
+        child.tag = title.textContent;
         titleWrapper.appendChild(title);
         child.appendChild(titleWrapper);
         child.appendChild(content);
         postWrapper.appendChild(child);
     }
-
-    new TagInput(document.getElementById('tag-tb'), document.getElementById('tags'));
+    
+    var tagInput = new TagInput(document.getElementById('tag-tb'), document.getElementById('tags'));
 };
