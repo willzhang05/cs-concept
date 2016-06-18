@@ -69,6 +69,7 @@ header .title h3 {
     display: inline-block;
     height: auto;
     padding: 10px;
+    width: 100% !important;
 }
 #tag-icon {
     font-size: 1.2em;
