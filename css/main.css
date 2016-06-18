@@ -30,24 +30,19 @@ header {
     z-index: 1;
     transition: .4s height linear;
 }
-header .title {
+header #title {
     position: relative;
     display: inline-block;
     top: 20%;
     left: 20%;
 }
-header .title h1 {
+header #title h1 {
     font-weight: 400;
     font-size: 7em;
 }
-header .title h3 {
+header #title h3 {
     font-size: 3em;
     font-weight: 300;
-}
-@media (min-width: 500px) {
-    #header-inner {
-        background-size: contain;
-    }
 }
 #content {
     width: 100%;
@@ -81,16 +76,24 @@ header .title h3 {
 #tag-box-wrapper {
 	width: 60vw;
 	height: calc(1.2em + 30px);
-	box-shadow: 0px 1px 6px -3px black;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 	background-color: #bdc0ff;
-	transition: background-color .1s, box-shadow .1s;
 	overflow-x: scroll;
 	white-space: nowrap;
 	display: flex;
 	align-items: center;
 }
 #tag-box-wrapper.focus {
-	box-shadow: 0px 3px 6px -3px black;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: #bdc0ff;
 }
 #tags {
@@ -120,31 +123,32 @@ header .title h3 {
     height: 20px;
     padding: 3px 10px;
     margin-left: 10px;
-    background-color: #e74c3c;
+    background-color: #757575;
     border-radius: 3px;
-    box-shadow: 1px 1px 2px black;
     display: inline-block;
     color: #fff;
 }
 
 
 #post-wrapper {
-    width: 90vw;
+    width: 100vw;
     min-height: 100%;
-    margin: 2vh auto 0;
+    margin: auto 0;
     -webkit-column-count: 5;
-    -webkit-column-gap: 2vw;
+    -webkit-column-gap: 0;
     -moz-column-count: 5;
-    -moz-column-gap: 2vw;
+    -moz-column-gap: 0;
     column-count: 5;
-    column-gap: 2vw;
+    column-gap: 0;
     min-height: 200px;
 }
 .post {
-    width: calc(100% - 10px) !important;
+    width: calc(80% - 10px) !important;
     height: auto !important;
     display: inline-block;
+    margin-top: 2vh;
     margin-bottom: 2vh;
+    margin-left: 10%;
     padding: 5px;
     font-size: 12px;
     -webkit-transition: all .2s ease;
@@ -161,7 +165,6 @@ header .title h3 {
 .post:hover {
     -webkit-transform: scale(1.02, 1.02);
     transform: scale(1.02, 1.02);
-    z-index: 10;
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -200,7 +203,7 @@ header .title h3 {
 }
 footer {
     width: 100vw;
-    height: 7vh;
+    height: 15vh;
     min-height: 150px;
     display: table-cell;
     background-color: #A0A5FF;

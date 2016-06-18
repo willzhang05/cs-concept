@@ -17,7 +17,8 @@ window.onload = function() {
 		var content = document.createElement('div');
 		content.innerText = chickens;
 		child.className = 'post';
-		child.appendChild(title);
+		child.tag = title.innerText;
+        child.appendChild(title);
 		child.appendChild(content);
 		postWrapper.appendChild(child);
 	}
