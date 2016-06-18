@@ -40,14 +40,15 @@ class TagInput {
         }
         if (this.types.indexOf(this.input.value) != -1) {
             var tag = this.newTag(this.input.value);
+            tag.className += ' ' + this.input.value;
             this.wrapper.insertBefore(tag, this.input);
             this.tags.push(this.input.value);
             var posts = document.getElementById('post-wrapper').children;
             for (var i = 0; i < posts.length; i++) {
-                if (posts[i].firstChild.innerText != this.input.value) {
+                if (posts[i].firstChild.firstChild.innerText != this.input.value) {
                     var contains = false;
                     for (var t = 0; t < tags.length; t++) {
-                        if (this.tags[t] === posts[i].firstChild.innerText) {
+                        if (this.tags[t] === posts[i].firstChild.firstChild.innerText) {
                             contains = true;
                             break;
                         }
@@ -66,7 +67,7 @@ class TagInput {
         var del = this.tags.pop();
         var posts = document.getElementById('post-wrapper').children;
         for (var i = 0; i < posts.length; i++) {
-            if (posts[i].firstChild.innerText != del) {
+            if (posts[i].firstChild.firstChild.innerText != del) {
                 posts[i].style.display = 'inline-block';
             }
         }
