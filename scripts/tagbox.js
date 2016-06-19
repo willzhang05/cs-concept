@@ -15,8 +15,7 @@ class TagInput {
 
     handleKeyPress(e) {
     	var code = e.keyCode || e.charCode;
-    	console.log(code);
-        if (code === 13 && this.input.value.length > 0 && !this.tags.includes(this.input.value)) {
+        if (code === 13 && this.input.value.length > 0 && this.tags.indexOf(this.input.value) === -1) {
             this.insertTag();
         } else if (code === 8 && this.input.value.length === 0 && this.tags.length > 0) {
             this.backspace();
@@ -37,9 +36,6 @@ class TagInput {
     }
 
     insertTag() {
-        if (this.input.value.indexOf('chicken') != -1) {
-            alert("AYY LMAO NICE MEME M8");
-        }
         if (this.types.indexOf(this.input.value) != -1) {
             var tag = this.newTag(this.input.value);
             tag.className += ' ' + this.input.value;

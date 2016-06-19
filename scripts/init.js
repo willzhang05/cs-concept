@@ -26,6 +26,5 @@ window.onload = function() {
         child.appendChild(content);
         postWrapper.appendChild(child);
     }
-    
     var tagInput = new TagInput(document.getElementById('tag-tb'), document.getElementById('tags'));
 };
